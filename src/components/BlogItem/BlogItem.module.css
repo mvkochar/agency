@@ -1,0 +1,25 @@
+.blog_item {
+    width: 370px;
+}
+
+.blog_item_cat {
+    margin-top: 26px;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--text-dark);
+}
+
+.blog_item_title {
+    width: 338px;
+    margin-top: 15px;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--text-dark);
+}
+
+.blog_item_date {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--text-dark-gray);
+}
