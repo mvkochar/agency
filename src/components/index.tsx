@@ -3,5 +3,6 @@ import Main from "./Main";
 import Footer from "./Footer";
 import FaqItem from "./FaqItem/FaqItem";
 import BlogItem from "./BlogItem/BlogItem";
+import PortfolioItem from "./PortfolioItem/PortfolioItem";
 
-export { Header, Main, Footer, FaqItem, BlogItem }
+export { Header, Main, Footer, FaqItem, BlogItem, PortfolioItem }

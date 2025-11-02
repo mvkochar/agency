@@ -1,0 +1,28 @@
+.portfolio_item {
+    width: 370px;
+    height: 416px;
+    padding-top: 256px;
+    padding-left: 48px;
+}
+
+.portfolio_item_tag {
+    width: fit-content;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    padding-left: 16px;
+    padding-right: 15px;
+    background-color: var(--white);
+    border-radius: 19px;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--text-dark);
+}
+
+.portfolio_item_title {
+    margin-top: 24px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--white);
+}
