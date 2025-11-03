@@ -1,8 +1,16 @@
+import React from 'react'
 import { PortfolioItem } from '../components'
 import ProjectsList from '../db/ProjectsList'
 import './css/Portfolio.css'
 
 const Portfolio = () => {
+    const [tagName, setTagName] = React.useState("Show All")
+    const totalCount = ProjectsList.length
+    const designCount = ProjectsList.filter((elem)=> elem.tag === "Design").length
+    const brandingCount = ProjectsList.filter((elem)=> elem.tag === "Branding").length
+    const illustrationCount = ProjectsList.filter((elem)=> elem.tag === "Illustration").length
+    const motionCount = ProjectsList.filter((elem)=> elem.tag === "Motion").length
+
     return (
         <>
             <main className='portfolio-main'>
@@ -13,15 +21,40 @@ const Portfolio = () => {
                 </p>
             </main>
             <div className="portfolio-tabs d-f">
-                <button className='tab-btn tab-btn__active'>Show All<sup>14</sup></button>
-                <button className='tab-btn'>Design<sup>6</sup></button>
-                <button className='tab-btn'>Branding<sup>4</sup></button>
-                <button className='tab-btn'>Illustration<sup>3</sup></button>
-                <button className='tab-btn'>Motion<sup>1</sup></button>
+                <button 
+                    className={tagName === "Show All" ?  'tab-btn tab-btn__active' : 'tab-btn'} 
+                    onClick={()=>setTagName("Show All")}
+                >
+                    Show All<sup>{totalCount}</sup>
+                </button>
+                <button 
+                    className={tagName === "Design" ?  'tab-btn tab-btn__active' : 'tab-btn'} 
+                    onClick={()=>setTagName("Design")}
+                >
+                    Design<sup>{designCount}</sup>
+                </button>
+                <button 
+                    className={tagName === "Branding" ?  'tab-btn tab-btn__active' : 'tab-btn'} 
+                    onClick={()=>setTagName("Branding")}
+                >
+                    Branding<sup>{brandingCount}</sup>
+                </button>
+                <button 
+                    className={tagName === "Illustration" ?  'tab-btn tab-btn__active' : 'tab-btn'} 
+                    onClick={()=>setTagName("Illustration")}
+                >
+                    Illustration<sup>{illustrationCount}</sup>
+                </button>
+                <button 
+                    className={tagName === "Motion" ?  'tab-btn tab-btn__active' : 'tab-btn'} 
+                    onClick={()=>setTagName("Motion")}
+                >
+                    Motion<sup>{motionCount}</sup>
+                </button>
             </div>
             <div className="portfolio-content d-f">
                 {
-                    ProjectsList.map((project) => {
+                    ProjectsList.filter((elem)=> elem.tag === tagName || tagName === "Show All").map((project) => {
                         return (
                             <PortfolioItem
                                 key={`project${project.id}`}

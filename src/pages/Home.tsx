@@ -613,17 +613,16 @@ const Home = () => {
         </div>
         <div className="home-blog-box d-f">
           {
-            PostsList.map((post) => {
+            PostsList.filter((elem) => elem.id < 4).map((post) => {
               return (
                 <BlogItem
-                  key={`post${post.id}`}
+                  key={`post-latest${post.id}`}
                   {...post}
                 />
               )
             })
           }
         </div>
-
       </section>
       <section className='home-newsletter d-f jc-sb'>
         <h3 className="h3-title">Newsletter</h3>
