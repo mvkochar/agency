@@ -13,7 +13,7 @@ const Header = () => {
           <li className="header-nav-item"><Link to="/blog">Blog</Link></li>
         </ul>
       </nav>
-      <a href="" className="header-contact">Contact</a>
+      <Link to="/contact" className="header-contact">Contact</Link>
     </header>
   )
 }
