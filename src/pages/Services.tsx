@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './css/Services.css'
 
 const Services = () => {
@@ -132,7 +133,7 @@ const Services = () => {
                         A digital agency is a business you hire to outsource
                         your digital marketing efforts, instead of handling in-house.
                     </p>
-                    <a href="" className="services-help-link">Contact Us</a>
+                    <Link to="/contact" className="services-help-link">Contact Us</Link>
                 </div>
                 <div><img src="/images/home-help-pic.png" alt="home-help-pic" /></div>
             </section>

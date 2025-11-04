@@ -2,6 +2,7 @@ import React from 'react'
 import './css/About.css'
 import FaqsList from '../db/FaqsList'
 import { FaqItem } from '../components'
+import { Link } from 'react-router-dom'
 
 const About = () => {
     const [pinNum, setPinNum] = React.useState(1)
@@ -224,7 +225,7 @@ const About = () => {
                             A digital agency is a business you hire to outsource
                             your digital marketing efforts, instead of handling in-house.
                         </p>
-                        <a href="" className="about-help-link">Contact Us</a>
+                        <Link to="/contact" className="about-help-link">Contact Us</Link>
                     </div>
                     <div><img src="/images/home-help-pic.png" alt="home-help-pic" /></div>
                 </section>

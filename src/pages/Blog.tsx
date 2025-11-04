@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { BlogItem } from '../components'
 import PostsList from '../db/PostsList'
 import './css/Blog.css'
@@ -55,7 +56,7 @@ const Blog = () => {
                         A digital agency is a business you hire to outsource
                         your digital marketing efforts, instead of handling in-house.
                     </p>
-                    <a href="" className="blog-help-link">Contact Us</a>
+                    <Link to="/contact" className="blog-help-link">Contact Us</Link>
                 </div>
                 <div><img src="/images/home-help-pic.png" alt="home-help-pic" /></div>
             </section>

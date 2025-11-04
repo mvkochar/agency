@@ -1,17 +1,18 @@
+import { Link } from 'react-router-dom'
 import './Footer.css'
 
 const Footer = () => {
   return (
     <footer className='footer'>
       <div className="d-f jc-sb">
-        <div><img src="/images/footer-agency-logo.svg" alt="footer-agency-logo" /></div>
+        <div><Link to="/"><img src="/images/footer-agency-logo.svg" alt="footer-agency-logo" /></Link></div>
         <div>
           <h5 className="h5-title">Menu</h5>
           <ul className="footer-list">
-            <li className="text"><a href=""> About</a></li>
-            <li className="text"><a href="">Services</a></li>
-            <li className="text"><a href="">Blog</a></li>
-            <li className="text"><a href="">Contact</a></li>
+            <li className="text"><Link to="/about">About</Link></li>
+            <li className="text"><Link to="/services">Services</Link></li>
+            <li className="text"><Link to="/blog">Blog</Link></li>
+            <li className="text"><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
         <div>

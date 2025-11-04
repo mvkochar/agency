@@ -3,6 +3,7 @@ import './css/Home.css'
 import FaqsList from '../db/FaqsList'
 import { BlogItem, FaqItem } from '../components'
 import PostsList from '../db/PostsList'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   const [pinNum, setPinNum] = React.useState(1)
@@ -43,7 +44,7 @@ const Home = () => {
             It is meant to partner on the long run, and work
             as an extension of the merchant's team.
           </p>
-          <a href="" className="home-about-link">About Us</a>
+          <Link to="/about" className="home-about-link">About Us</Link>
         </div>
       </section>
       <table className='home-stats'>
@@ -609,7 +610,7 @@ const Home = () => {
             <h5 className="h5-title">Our Blog</h5>
             <h2 className="h2-title">Latest Blog Articles</h2>
           </div>
-          <a href="" className="home-blog-link">Discover All</a>
+          <Link to="/blog" className="home-blog-link">Discover All</Link>
         </div>
         <div className="home-blog-box d-f">
           {
@@ -673,7 +674,7 @@ const Home = () => {
               A digital agency is a business you hire to outsource 
               your digital marketing efforts, instead of handling in-house.
             </p>
-            <a href="" className="home-help-link">Contact Us</a>
+            <Link to="/contact" className="home-help-link">Contact Us</Link>
           </div>
           <div><img src="/images/home-help-pic.png" alt="home-help-pic" /></div>
       </section>
