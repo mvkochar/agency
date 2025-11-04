@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { About, Blog, Contact, Home, Portfolio, Services } from "../pages"
+import { About, Blog, Contact, Home, Portfolio, Services, SinglePost } from "../pages"
 
 const Main = () => {
     return (
@@ -27,6 +27,10 @@ const Main = () => {
             <Route
                 path="contact"
                 element={<Contact />}
+            />
+            <Route
+                path="post"
+                element={<SinglePost/>}
             />
         </Routes>
     )

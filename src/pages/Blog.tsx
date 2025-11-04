@@ -15,7 +15,7 @@ const Blog = () => {
             </main>
             <div className="blog-latest d-f">
                 <div className="blog-latest-item">
-                    <div><img src="/images/blog-latest1.png" alt="blog-latest1" /></div>
+                    <div><Link to="/post"><img src="/images/blog-latest1.png" alt="blog-latest1" /></Link></div>
                     <p className="text-big">Stories</p>
                     <h3 className="h3-title">Performance marketing agencies specialize</h3>
                     <p className="text">7 Dec, 2021</p>
